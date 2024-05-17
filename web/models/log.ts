@@ -20,6 +20,13 @@ export type ConversationListResponse = {
   logs: Conversation[]
 }
 
+/**
+ * Fetch logs from the specified URL.
+ * 
+ * @param url - The URL to fetch logs from.
+ * @returns A promise that resolves to a ConversationListResponse.
+ * @throws Throws an error if the fetch operation fails.
+ */
 export const fetchLogs = (url: string) =>
   fetch(url).then<ConversationListResponse>(r => r.json())
 

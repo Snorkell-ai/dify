@@ -8,6 +8,10 @@
 
 document.body.onload = embedChatbot;
 
+/**
+ * Asynchronous function to embed the chatbot into the webpage.
+ * @throws {Error} If difyChatbotConfig is empty or token is not provided.
+ */
 async function embedChatbot () {
   const difyChatbotConfig = window.difyChatbotConfig;
   if (!difyChatbotConfig || !difyChatbotConfig.token) {
@@ -48,6 +52,10 @@ async function embedChatbot () {
           />
         </svg>`
 
+  /**
+   * Creates an iframe for the chatbot bubble window.
+   * @throws {Error} If there is an issue creating the iframe.
+   */
   // create iframe
   function createIframe () {
     const iframe = document.createElement('iframe');
